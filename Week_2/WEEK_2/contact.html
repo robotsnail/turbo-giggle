@@ -1,0 +1,28 @@
+<form action="/action_page.php">
+
+<!-- NAME FIELD -->   
+<label for="name">full name:</label><br>
+<input type="text" id="name" name="name"><br>
+
+<!--EMAIL FIELD-->
+<label for="email">email</label><br>
+<input type="email" id="email" name="email"><br>
+
+<!--MESSAGE FIELD-->
+<label for="message">message</label><br>
+<input type="text" id="message" name="message"> <br>
+
+<!--SUBMIT/RESET BUTTON FIELDS (from bootstrap)-->
+<button type="submit" class="btn btn-primary">Submit</button>
+<button type="reset" class="btn btn-primary">Reset</button>
+</form>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() 
+{
+    document.querySelector('form').addEventListener('submit', function(event) 
+    {alert('HEYYYY, ' + document.querySelector('#name').value);
+    event.preventDefault();
+    });
+});
+</script>
