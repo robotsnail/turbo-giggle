@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+
+    <!--BOOTSTRAP CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8" />
+    <title>Flex and Grid</title>
+</head>
+<body>
+
+    <!--BOOTSTRAP NAVBAR-->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <a class="navbar-brand" href="index.html">
+        <img class="navbar-logo" 
+             src="https://media1.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3MXBpdHZ0dWpvNDBrdW8zaTEzZXBiZnE1YTMxazNheXN5MGJtMGtubSZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/tH56cbWKDTM1IDhiWy/200.webp" 
+             alt="heart gif" />        </a>
+
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">home <span class="sr-only">(current)</span></a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="learnaboutme.html">about me</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="myprojects.html">my projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">contact</a>
+                </li>
+
+            </ul>
+           <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn-pink" type="submit">search!</button>
+            </form>
+        </div>
+    </nav>
+
+    <main class="container py-5"> 
+    <h1>Flex and Grid</h1>
+  <p>
+    On this page I experiment with Flexbox, Grid, and different position values in CSS.
+    Resize the browser window to see what happens!
+  </p>
+
+  <!-- FLEXBOX GALLERY -->
+  <section class="section-card mb-5">
+    <h2>Flexbox gallery</h2>
+    <p>
+      Flexbox arranges items in a row or column.  
+      Here I use <code>display: flex</code> on the container and
+      <code>gap</code> to create space between the items.
+    </p>
+
+    <div class="flex-gallery">
+      <div class="box">Item 1</div>
+      <div class="box">Item 2</div>
+      <div class="box">Item 3</div>
+      <div class="box">Item 4</div>
+      <div class="box">Item 5</div>
+      <div class="box">Item 6</div>
+    </div>
+  </section>
+
+  <!-- GRID GALLERY -->
+  <section class="section-card mb-5">
+    <h2>Grid gallery</h2>
+    <p>
+      CSS Grid lets me make a layout with rows and columns.
+      Here I use <code>display: grid</code> with
+      <code>grid-template-columns: repeat(3, 1fr)</code> to get
+      three equal columns.
+    </p>
+
+    <div class="grid-gallery">
+      <div class="box">Item 1</div>
+      <div class="box">Item 2</div>
+      <div class="box">Item 3</div>
+      <div class="box">Item 4</div>
+      <div class="box">Item 5</div>
+      <div class="box">Item 6</div>
+    </div>
+  </section>
+
+  <!-- POSITION EXPERIMENTS -->
+  <section class="section-card mb-5">
+    <h2>Position experiments</h2>
+    <p>
+      Below I try the different <code>position</code> values: static, relative, absolute, fixed, sticky, inherit.
+      Scroll to see how they behave :)
+    </p>
+
+    <div class="position-demo">
+      <div class="pos-box pos-static">
+        static: the default. Element just follows the normal flow.
+      </div>
+
+      <div class="pos-box pos-relative">
+        relative: I moved this box 20px down and 20px right
+        with <code>top</code> and <code>left</code>, but it still
+        keeps its original space.
+      </div>
+
+      <div class="pos-wrapper">
+        <div class="pos-box pos-absolute">
+          absolute: taken out of the normal flow and positioned
+          10px from the top/left of the grey parent box.
+        </div>
+      </div>
+
+      <div class="pos-box pos-fixed">
+        fixed: this bar stays stuck to the bottom of the window
+        even when you scroll.
+      </div>
+
+      <div class="pos-box pos-sticky">
+        sticky: scroll until this box reaches the top of the page;
+        then it sticks there.
+      </div>
+
+      <div class="pos-parent">
+        <p>
+          This parent has <code>position: relative</code>.
+          The child below uses <code>position: inherit</code>,
+          so it inherits the same positioning mode.
+        </p>
+        <div class="pos-box pos-inherit">
+          inherit: inherits <code>position: relative</code> from the parent.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-card mt-5">
+    <h2>HTML entities</h2>
+    <p>
+        HTML entities are special codes that let you display characters that normally 
+        have a meaning in HTML (like &lt; or &amp;). Here are the required ones:
+    </p>
+
+    <ul>
+        <li><strong>&amp;</strong> → written as <code>&amp;amp;</code> → displays an ampersand.</li>
+        <li><strong>&quot;</strong> → written as <code>&amp;quot;</code> → displays a double quote.</li>
+        <li><strong>&lt;</strong> → written as <code>&amp;lt;</code> → displays a less-than sign.</li>
+        <li><strong>&gt;</strong> → written as <code>&amp;gt;</code> → displays a greater-than sign.</li>
+        <li><strong>&nbsp;</strong> → written as <code>&amp;nbsp;</code> → creates a non-breaking space (a space that will not collapse or wrap).</li>
+        <li><strong>&euro;</strong> → written as <code>&amp;euro;</code> → displays the Euro symbol (€).</li>
+        <li><strong>&copy;</strong> → written as <code>&amp;copy;</code> → displays the copyright symbol (©).</li>
+        <li><strong>&trade;</strong> → written as <code>&amp;trade;</code> → displays the trademark symbol (™).</li>
+    </ul>
+
+    <p>Below is a sentence using all of them:</p>
+
+    <p class="box" style="max-width: 600px;">
+        &copy; 2025 My Portfolio&nbsp;&nbsp;|&nbsp; 
+        Price: 25&euro;&nbsp;&nbsp;|&nbsp;
+        This is a trademarked name&trade;&nbsp;&nbsp;|&nbsp;
+        Symbols: &amp; &quot; &lt; &gt;
+    </p>
+</section>
+<section class="section-card mt-5">
+  <h2> CRUD</h2>
+  <p> CRUD describes the four important actions you can perform on data: Create it, Read it, Update, and Delete it.</p>
+</section>
+
+  </main>
+</body>
+</html>
